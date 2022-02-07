@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(ProjectDir)bin\Debug\net5.0\$(TargetFileName)&quot; &quot;..\..\$(SolutionName)\DependencyInjection\bin\Debug\net5.0&quot; /K /D /H /Y" />
+    <Exec Command="xcopy &quot;$(ProjectDir)bin\Debug\net5.0\$(TargetFileName)&quot; &quot;..\$(SolutionName)\bin\Debug\net5.0&quot; /K /D /H /Y" />
   </Target>
 
 </Project>
